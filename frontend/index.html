@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Invoice</title>
+</head>
+<body>
+    <h1>Ghost Invoice</h1>
+
+    <section>
+        <h2>Sender</h2>
+        <input placeholder="Your name or company" />
+        <input placeholder="Your address" />
+    </section>
+
+    <section>
+        <h2>Client</h2>
+        <input placeholder="Client name" />
+        <input placeholder="Client address" />
+    </section>
+
+    <section>
+        <h2>Line Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id ="line-items">
+                <tr>
+                    <td><input placeholder="e.g. Work" /></td>
+                    <td><input type="number" value="1" /></td>
+                    <td><input type="number" value="100" /></td>
+                    <td>$100</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="add-row">+ Add Row</button>
+    </section>
+
+    <section>
+        <h2>Notes</h2>
+        <textarea placeholder="Optional notes"></textarea>
+    </section>
+
+    <section>
+        <h2>Total <span id="invoice-total">$100</span></h2>
+        <button id="print">Print</button>
+        <button id="download">Download PDF</button>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
